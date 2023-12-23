@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <body style="background-color:rgb(255, 255, 255);">
+  <div class="container">
+    <h1>Welcome to the Class Scheduler</h1>
+    <div class="form">
+      <strong><label for="userType">Select User Type:</label></strong>
+      <select id="userType">
+        <option value="student">Student</option>
+        <option value="tutor">Tutor</option>
+        <option value="parent">parent</option>
+      </select>
+      <textarea id="inputText" placeholder="Type your request here..."></textarea>
+      <button onclick="processRequest()">Submit</button>
+    </div>
+     <div class="container">
+    <h1>Class Timetable Request</h1>
+    <form id="timetableForm">
+      <strong> <label for="studentName">Your Name:</label></strong>
+      <input type="text" id="studentName" required>
+
+      <strong><label for="studentID">Student ID:</label></strong>
+      <input type="text" id="studentID" required>
+
+      <button type="submit">Request Timetable</button>
+    </form>
+       <div class="container">
+    <h1>Class Cancellation Request</h1>
+    <form id="cancellationForm">
+      <label for="studentName">Your Name:</label><br>
+      <input type="text" id="studentName" required></br>
+
+      <label for="studentID">Student ID:</label><br>
+         <input type="text" id="studentID" required></br>
+
+      <label for="classToCancel">Class to Cancel:</label><br>
+       </br><input type="text" id="classToCancel" required><br>
+
+    <strong><label for="Reason">Reason:</label></strong>
+    <textarea id="Reason" required></textarea>
+
+      <button type="submit">Request Class Cancellation</button>
+    </form>
+
+    <div id="confirmationMessage" style="display: none;">
+      <!-- Confirmation message will be displayed here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+    <div id="timetableDisplay">
+      <!-- Timetable will be displayed here -->
+      <div class="container">
+    <h1>Class Schedule Inquiry</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Ask about your class schedule..." autocomplete="off">
+    <button id="sendBtn">Send</button>
+  </div>
+<div class="container">
+    <h1>Invoice Generation</h1>
+    <form id="invoiceForm">
+      <label for="parentName">Parent's Name:</label>
+      <input type="text" id="parentName" required>
+
+      <label for="studentName">Student's Name:</label>
+      <input type="text" id="studentName" required>
+
+      <label for="totalAmount">Total Amount:</label>
+      <input type="number" id="totalAmount" required>
+
+      <label for="invoiceDetails">Invoice Details:</label>
+      <textarea id="invoiceDetails" required></textarea>
+
+      <button type="submit">Generate Invoice</button>
+    </form>
+
+    <div id="invoiceDisplay" style="display: none;">
+      <h2>Generated Invoice</h2>
+      <div id="invoiceDetailsDisplay"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+      
+   
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+    <div id="output" class="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

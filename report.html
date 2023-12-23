@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Report Generator</title>
+</head>
+<body>
+    <h1>Generate Comprehensive Reports</h1>
+    <form id="reportForm">
+        <label for="reportType">Select Report Type:</label>
+        <select id="reportType" name="reportType">
+            <option value="attendance">Attendance</option>
+            <option value="progress">Progress</option>
+            <option value="metrics">Metrics</option>
+        </select>
+        <br><br>
+        <label for="reportFormat">Select Report Format:</label>
+        <select id="reportFormat" name="reportFormat">
+            <option value="pdf">PDF</option>
+            <option value="csv">CSV</option>
+            <option value="xlsx">XLSX</option>
+        </select>
+        <br><br>
+        <button type="submit">Generate Report</button>
+    </form>
+    <script>
+        document.getElementById('reportForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let reportType = document.getElementById('reportType').value;
+            let reportFormat = document.getElementById('reportFormat').value;
+
+            alert(`Generating ${reportType} report in ${reportFormat} format...`);
+            // In real application, send these values to the server-side to generate the report
+        });
+    </script>
+    <footer class="footer">
+
+        &copy; excecuted by <span>brainable</span> | all rights reserved!
+     
+     </footer>
+</body>
+</html>
